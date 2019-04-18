@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Linux,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Linux下的用户linux下有两种用户：超级用户和普通用户 超级用户: 即root用户，类似windows的管理员用户，但管理员用户可以有多个且名字可修改，而超级用户只有一个且不能修改名字。 普通用户: 一般使用的用户。 两者的差异：1, root用户只有一个且不能修改名字，普通用户可以有多个且名字自定义。 2, root用户的权限很大，几乎可以做任何事；而普通用户的权限受限制。所以我们工作时一">
+<meta name="description" content="Linux文件属性与权限操作首先我们来了解一个用户组的概念，Linux下的每一个用户均属于一个且只有一个主要用户组。 对文件来说，用户分为:  所有者: 即owner，文件的所有者一般就是文件的创建者，可以使用ls -ahl命令查看文件的所有者，chown 用户名 文件名命令可以修改文件的所有者 所在组: 即group，文件的所有者所在的主要用户组，可以使用ls -ahl 命令查看文件的所在组，c">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux下的用户">
-<meta property="og:url" content="http://yoursite.com/2019/04/18/Linux下的用户/index.html">
+<meta property="og:title" content="Linux文件属性与权限操作">
+<meta property="og:url" content="http://yoursite.com/2019/04/18/Linux文件属性与权限操作/index.html">
 <meta property="og:site_name" content="我即果壳">
-<meta property="og:description" content="Linux下的用户linux下有两种用户：超级用户和普通用户 超级用户: 即root用户，类似windows的管理员用户，但管理员用户可以有多个且名字可修改，而超级用户只有一个且不能修改名字。 普通用户: 一般使用的用户。 两者的差异：1, root用户只有一个且不能修改名字，普通用户可以有多个且名字自定义。 2, root用户的权限很大，几乎可以做任何事；而普通用户的权限受限制。所以我们工作时一">
+<meta property="og:description" content="Linux文件属性与权限操作首先我们来了解一个用户组的概念，Linux下的每一个用户均属于一个且只有一个主要用户组。 对文件来说，用户分为:  所有者: 即owner，文件的所有者一般就是文件的创建者，可以使用ls -ahl命令查看文件的所有者，chown 用户名 文件名命令可以修改文件的所有者 所在组: 即group，文件的所有者所在的主要用户组，可以使用ls -ahl 命令查看文件的所在组，c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-17T16:33:55.716Z">
+<meta property="og:updated_time" content="2019-04-18T09:25:23.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux下的用户">
-<meta name="twitter:description" content="Linux下的用户linux下有两种用户：超级用户和普通用户 超级用户: 即root用户，类似windows的管理员用户，但管理员用户可以有多个且名字可修改，而超级用户只有一个且不能修改名字。 普通用户: 一般使用的用户。 两者的差异：1, root用户只有一个且不能修改名字，普通用户可以有多个且名字自定义。 2, root用户的权限很大，几乎可以做任何事；而普通用户的权限受限制。所以我们工作时一">
+<meta name="twitter:title" content="Linux文件属性与权限操作">
+<meta name="twitter:description" content="Linux文件属性与权限操作首先我们来了解一个用户组的概念，Linux下的每一个用户均属于一个且只有一个主要用户组。 对文件来说，用户分为:  所有者: 即owner，文件的所有者一般就是文件的创建者，可以使用ls -ahl命令查看文件的所有者，chown 用户名 文件名命令可以修改文件的所有者 所在组: 即group，文件的所有者所在的主要用户组，可以使用ls -ahl 命令查看文件的所在组，c">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/18/Linux下的用户/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/18/Linux文件属性与权限操作/">
 
 
 
 
 
-  <title>Linux下的用户 | 我即果壳</title>
+  <title>Linux文件属性与权限操作 | 我即果壳</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/Linux下的用户/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/Linux文件属性与权限操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="詹俊">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux下的用户</h1>
+          <h1 class="post-title" itemprop="name headline">Linux文件属性与权限操作</h1>
         
 
         <div class="post-meta">
@@ -281,7 +282,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-18T00:30:12+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-18T17:24:23+08:00">
                 2019-04-18
               </time>
             
@@ -341,22 +342,41 @@
       
 
       
-        <h3 id="Linux下的用户"><a href="#Linux下的用户" class="headerlink" title="Linux下的用户"></a>Linux下的用户</h3><p>linux下有两种用户：超级用户和普通用户</p>
-<p><strong>超级用户</strong>: 即root用户，类似windows的管理员用户，但管理员用户可以有多个且名字可修改，而超级用户只有一个且不能修改名字。</p>
-<p><strong>普通用户</strong>: 一般使用的用户。</p>
-<h6 id="两者的差异："><a href="#两者的差异：" class="headerlink" title="两者的差异："></a>两者的差异：</h6><p>1, root用户只有一个且不能修改名字，普通用户可以有多个且名字自定义。</p>
-<p>2, root用户的权限很大，几乎可以做任何事；而普通用户的权限受限制。所以我们工作时一般都在普通用户下，不用担心误操作带来无法挽回的结果。</p>
-<p>3, 在终端，root用户对应的符号是#，普通用户对应的符号是$</p>
-<p>4, root用户的home目录是根目录下的root目录，普通用户的home目录是/home/&lt;用户名&gt;。其中根目录即为/，代表所有目录的根。</p>
-<h6 id="一些相关的命令"><a href="#一些相关的命令" class="headerlink" title="一些相关的命令"></a>一些相关的命令</h6><p>pwd: 查询当前所在的目录</p>
-<p>cd: 跳转到某目录处</p>
-<p>su: 在普通用户与root之间切换，su后面加用户名表示切换到该用户名对应的普通用户，不加表示切换到root用户</p>
-<p>passdw: 修改当前用户的密码（Tab键可以在使用命令行时自动补齐）</p>
-<p>userad: 在root用户下，添加普通用户</p>
-<p>userdel: 在root用户下删除普通用户（此时普通用户必须已经退出了）</p>
-<p>logout: 退出用户</p>
-<p>~: 代表当前用户的home目录</p>
-<p>本文参考网易云课堂的教学视频<a href="https://study.163.com/course/courseLearn.htm?courseId=1548004#/learn/video?lessonId=1850090&amp;courseId=1548004" target="_blank" rel="noopener">Linux入门-零基础2小时用会Linux</a></p>
+        <h4 id="Linux文件属性与权限操作"><a href="#Linux文件属性与权限操作" class="headerlink" title="Linux文件属性与权限操作"></a>Linux文件属性与权限操作</h4><p>首先我们来了解一个用户组的概念，Linux下的每一个用户均属于一个且只有一个主要用户组。</p>
+<p>对文件来说，用户分为:</p>
+<ol>
+<li>所有者: 即<strong>owner</strong>，文件的所有者一般就是文件的创建者，可以使用<strong>ls -ahl命令</strong>查看文件的所有者，<strong>chown 用户名 文件名</strong>命令可以修改文件的所有者</li>
+<li>所在组: 即<strong>group</strong>，文件的所有者所在的主要用户组，可以使用<strong>ls -ahl</strong> 命令查看文件的所在组，<strong>chgrp 组名 文件名</strong> 命令可以修改文件所在的组</li>
+<li>其他组: 即<strong>other</strong>，所在组以外的所有用户组</li>
+</ol>
+<p>~/etc目录下的<strong>passwd文件</strong>可以查看用户信息，<strong>group文件</strong>可以查看用户组及其属性信息</p>
+<hr>
+<p>一些命令：</p>
+<ul>
+<li><p>ls：查看文件</p>
+</li>
+<li><p>ls -l：查看当前目录下的文件属性（不包括隐藏文件），格式为　用户权限＋用户信息＋文件大小＋最后一次修改文件的日期＋文件名</p>
+<p>如：</p>
+<blockquote>
+<p>drwx—— 38 gokej gokej   4096  4月 18 11:07 ..<br>-rwxr-xr-x  1 gokej gokej 108552  4月 17 21:43 my_date</p>
+</blockquote>
+<p>1, 第一个分别是文件的所有者、所在组、其他组的权限，其中r代表可读，w代表可写，x代表可执行，只有横杠没有字母代表没有任何权限。（注：d开头表示为隐藏文件，-开头则不是）</p>
+<p>2, 第二个是所有者与所在组</p>
+<p>3, 后面依次是是文件大小、最后一次修改文件的日期、文件名</p>
+</li>
+<li><p>ls -la：查看当前目录所有文件（包括隐藏文件）的属性。（顺便提一下，在创建文件时，文件名开头加.代表隐藏文件）</p>
+</li>
+<li><p>man + 命令名字：查看该命令的官方文档</p>
+</li>
+<li><p>chmod + 三个八进制数字＋文件名：修改用户对文件的权限</p>
+<p>r、w、d分别对应二进制的一个位，相应的二进制数字转换成八进制数字，则代表了用户对文件的权限</p>
+<p>如：修改成可读可写不可执行 - 110 - 6 </p>
+<p>chmod 644 work：代表分别将所有者、所在组、其他组的权限改成可读可写不可执行、可读不可写不可执行、可读不可写不可执行</p>
+</li>
+</ul>
+<p>本文参考：</p>
+<p><a href="https://study.163.com/course/courseLearn.htm?courseId=1548004#/learn/video?lessonId=1850090&amp;courseId=1548004" target="_blank" rel="noopener">Linux入门-零基础2小时用会Linux</a></p>
+<p><a href="https://blog.51cto.com/13438667/2061590" target="_blank" rel="noopener">Linux用户user，组group详解</a></p>
 
       
     </div>
@@ -372,6 +392,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
 
       
       
@@ -381,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/18/urllib实现简单的爬虫/" rel="next" title="urllib实现简单的爬虫">
-                <i class="fa fa-chevron-left"></i> urllib实现简单的爬虫
+              <a href="/2019/04/18/Linux文件操作/" rel="next" title="Linux文件操作">
+                <i class="fa fa-chevron-left"></i> Linux文件操作
               </a>
             
           </div>
@@ -390,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/18/Linux PATH环境变量以及常用快捷键/" rel="prev" title="Linux PATH环境变量以及常用快捷键">
-                Linux PATH环境变量以及常用快捷键 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux下的用户"><span class="nav-number">1.</span> <span class="nav-text">Linux下的用户</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#两者的差异："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">两者的差异：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#一些相关的命令"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">一些相关的命令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux文件属性与权限操作"><span class="nav-number">1.</span> <span class="nav-text">Linux文件属性与权限操作</span></a></li></ol></div>
             
 
           </div>
