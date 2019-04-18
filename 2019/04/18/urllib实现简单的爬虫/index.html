@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="我即果壳">
 <meta property="og:description" content="## 写爬虫时常用的库 urlliburl就是网址的意思，而urllib是python自带的用于操作网址的标准库，其中有request、parse、error、robotsparser四个模块，request用于打开和读取网页，parse用于解析url，error用于处理异常(只有URLError和HTTPError两个函数)，robotsparser用于读取网页的爬虫协议(网页用于规定哪些内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-18T09:25:52.111Z">
+<meta property="og:updated_time" content="2019-04-18T09:40:49.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="urllib实现简单的爬虫">
 <meta name="twitter:description" content="## 写爬虫时常用的库 urlliburl就是网址的意思，而urllib是python自带的用于操作网址的标准库，其中有request、parse、error、robotsparser四个模块，request用于打开和读取网页，parse用于解析url，error用于处理异常(只有URLError和HTTPError两个函数)，robotsparser用于读取网页的爬虫协议(网页用于规定哪些内容">
@@ -403,6 +403,10 @@ url = &apos;http://fanyi.youdao.com/translate&apos;    # 访问的网址
 </blockquote>
 <p>第一个函数用于设置代理的Handler，参数为一个字典：{‘类型’ : ‘ip地址:端口号’}<br>第二个函数定制opener，我们在使用urlopen函数时即在使用opener工作，参数为Handler<br>第三个参数安装opener，安装之后每次使用urlopen函数都会用定制的opener访问网页</p>
 <h5 id="程序示例-1"><a href="#程序示例-1" class="headerlink" title="程序示例"></a>程序示例</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = request.Request(<span class="string">'http://fanyi.youdao.com/translate'</span>)</span><br><span class="line">url.add_header(<span class="string">'User Agent'</span>, <span class="string">'Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) '</span></span><br><span class="line">                             <span class="string">'AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19'</span>)</span><br><span class="line"></span><br><span class="line">ip_list = [<span class="string">'150.109.55.190:83'</span>, <span class="string">'165.227.62.167:8080'</span>, <span class="string">'163.172.220.221:8888'</span>]</span><br><span class="line"><span class="comment"># 从ip列表里随机选一个ip,设置代理的handler</span></span><br><span class="line">proxy_support = request.ProxyHandler(&#123;<span class="string">'http'</span> : random.choice(ip_list)&#125;)</span><br><span class="line">opener = request.build_opener(proxy_support)    <span class="comment"># 创建一个opener</span></span><br><span class="line">request.install_opener(opener)    <span class="comment"># 安装opener</span></span><br><span class="line"></span><br><span class="line">response = request.urlopen(url)    <span class="comment"># 访问网页</span></span><br><span class="line">print(response.read().decode(<span class="string">'utf-8'</span>))    <span class="comment"># 打印返回的html代码</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文参考：</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432688314740a0aed473a39f47b09c8c7274c9ab6aee000" target="_blank" rel="noopener">廖雪峰的Python教程</a></p>
+<p><a href="https://isxxy.com/play/1299" target="_blank" rel="noopener">小甲鱼的爬虫教程</a></p>
 
       
     </div>
@@ -439,8 +443,8 @@ url = &apos;http://fanyi.youdao.com/translate&apos;    # 访问的网址
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/18/Linux PATH环境变量以及常用快捷键/" rel="prev" title="Linux PATH环境变量以及常用快捷键">
-                Linux PATH环境变量以及常用快捷键 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/18/Linux下的用户/" rel="prev" title="Linux下的用户">
+                Linux下的用户 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
